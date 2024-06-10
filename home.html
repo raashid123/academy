@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViSN Academy</title>
+    <title>ViSN Academy Home</title>
     <link rel="stylesheet" href="stylesheet/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <h1>ViSN Academy</h1>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <h1>ViSN Labs Academy</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Live Classes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link btn-login" href="#">Login</a></li>
-                    <li class="nav-item"><a class="nav-link btn-signup" href="#">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero d-none d-lg-block">
         <div class="container">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -55,71 +57,210 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <h2>Learn New Skills Online</h2>
-            <p>Join our community and take your skills to the next level.</p>
-            <a href="#" class="btn-hero">Get Started</a>
+            <h2>Welcome to ViSN Academy</h2>
+            <p>Empowering your learning journey with the best resources and instructors.</p>
+            <a href="contact.html" class="btn-hero">Get Started</a>
+        </div>
+    </section>
+    <section class="hero-mobile d-block d-lg-none">
+        <div class="container">
+            <h2>Welcome to ViSN Academy</h2>
+            <p>Empowering your learning journey with the best resources and instructors.</p>
+            <a href="contact.html" class="btn-hero">Get Started</a>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Visn Lab Academy?</h2>
+            <div class="features-main">
+                <div class="feature-main">
+                    <div class="icon">📋</div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with extensive experience in data science, who are committed to guiding you through a transformative educational journey.</p>
+                </div>
+                <div class="feature-main">
+                    <div class="icon">📑</div>
+                    <h3>Hands-On Learning</h3>
+                    <p>Engage in practical, lab-based sessions and real-world projects, enabling you to apply your knowledge and develop job-ready skills.</p>
+                </div>
+                <div class="feature-main">
+                    <div class="icon">🔄</div>
+                    <h3>Supportive Community</h3>
+                    <p>Access a vibrant community of learners and mentors, fostering collaboration, knowledge-sharing, and ongoing support throughout your data science journey.</p>
+                </div>
+                <div class="feature-main">
+                    <div class="icon">✒️</div>
+                    <h3>Excellence in Education</h3>
+                    <p>Benefit from Visn Lab Academy's commitment to providing a high-quality, transformative learning experience that sets you up for success.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="features">
-        <div class="container">
-            <div class="feature">
-                <h3>Expert Instructors</h3>
-                <p>Learn from industry experts who are passionate about teaching.</p>
-            </div>
-
+        <div class="container ">
+            <h2>What We Offer!!!!</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{% static 'images/instructor1.jpg' %}" alt="Instructor 1">
+                <div class=" feature">
+                    <h3>High Quality Courses</h3>
+                    <p>Our courses are designed by industry experts to help you achieve your career goals.</p>
+                    <p>Certainly! When we say our courses are designed by industry experts, we mean that professionals with significant
+                        experience and expertise in their respective fields have carefully crafted the course content.This ensures that 
+                        learners are equipped with the most current knowledge and skills, which is crucial in 
+                        fast-paced and evolving fields.Overall, our goal is to empower learners to achieve their career goals 
+                        by providing them with high-quality,relevant, and practical education that prepares them for success in 
+                        their chosen field.</p>
+                </div>
+                <div class=" feature">
+                    <h3>Interactive Learning</h3>
+                    <p>Engage with interactive content and live sessions to enhance your learning experience.</p>
+                    <p>Our interactive learning approach goes beyond passive content consumption, offering dynamic engagement through
+                         interactive modules and live sessions.Dive deep into the material with interactive exercises,quizzes,and 
+                         simulations that reinforce understanding and retention.Interact directly with instructors and peers in live 
+                         sessions,fostering collaboration and real-time feedback.This immersive learning experience not only enhances 
+                         comprehension but also cultivates a supportive community, enriching your journey towards mastery.</p>
+                </div>
+                <div class=" feature">
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from professionals with extensive experience in their respective fields.</p>
+                    <p>Our courses are led by expert instructors who bring extensive real-world experience to the virtual classroom. 
+                        Drawing from their deep knowledge and practical insights, these professionals provide invaluable guidance, 
+                        mentorship, and industry-specific expertise. Benefit from their firsthand experiences, case studies, and best 
+                        practices as they impart essential skills and insights relevant to your career goals. With our expert 
+                        instructors at the helm, you'll gain the confidence and knowledge needed to excel in your field of interest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey">
+        <div class="container">
+            <h2>Embark on Your Data Science Journey with Visn Lab Academy</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="number">1</div>
+                    <div class="content">
+                        <h3>Course Overview</h3>
+                        <p>Dive into the fundamental aspects of Data Science with our comprehensive, expert-led curriculum. Covering a wide range of topics, from introductory concepts to advanced techniques, our course equips you with the knowledge and skills to thrive in the data-driven world.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="number">2</div>
+                    <div class="content">
+                        <h3>Course Duration</h3>
+                        <p>The Data Science Fundamentals course at Visn Lab Academy is designed to be completed over several weeks, allowing you to balance your learning with your existing commitments. Immerse yourself in a flexible, online learning environment with live sessions and recorded lectures.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="number">3</div>
+                    <div class="content">
+                        <h3>Audience</h3>
+                        <p>Our Data Science course caters to a diverse audience, including aspiring data scientists, professionals seeking to upskill, and individuals with a keen interest in leveraging data to drive business success. Regardless of your background, our program is tailored to empower you with the necessary skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="instructors">
+        <div class="container">
+            <h2>Meet Our Instructors</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card text-center">
+                        <img src="images/tutor 1.jpg" alt="Instructor 1">
                         <div class="card-body">
-                            <h5 class="card-title">John Doe</h5>
+                            <h5 class="card-title">Dr. Gopal</h5>
                             <p class="card-text">Expert in Data Science</p>
                             <a href="#" class="card-link">Learn more</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{% static 'images/instructor2.jpg' %}" alt="Instructor 2">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card text-center">
+                        <img src="images/tutor 2.jpg" alt="Instructor 2">
                         <div class="card-body">
-                            <h5 class="card-title">Jane Smith</h5>
+                            <h5 class="card-title">Ms. Bharathi</h5>
                             <p class="card-text">Master of Web Development</p>
                             <a href="#" class="card-link">Learn more</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{% static 'images/instructor3.jpg' %}" alt="Instructor 3">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card text-center">
+                        <img src="images/tutor3.png" alt="Instructor 3">
                         <div class="card-body">
-                            <h5 class="card-title">Emily Johnson</h5>
+                            <h5 class="card-title">Mr.Raja Sekhar Amirapu</h5>
                             <p class="card-text">Specialist in Machine Learning</p>
-                            <a href="#" class="card-link">Learn more</a>
+                            <a href="https://www.linkedin.com/in/rajaamirapu/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="card-link">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 offset-md-4">
+                    <div class="card text-center">
+                        <img src="images/tutor4.png" alt="Instructor 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr.Venkateswarlu Paturu</h5>
+                            <p class="card-text">Expert in Data Science</p>
+                            <a href="https://www.linkedin.com/in/venkateswarlu-paturu/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="card-link">Learn more</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'images/instructor2.jpg' %}" alt="Instructor 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Jane Smith</h5>
-                        <p class="card-text">Master of Web Development</p>
-                        <a href="#" class="card-link">Learn more</a>
-                    </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container ">
+            <h2>Flexible Learning</h2>
+            <p>Study at your own pace, with lifetime access to courses.</p>
+            <div class="row">
+                <div class="col-md-4 feature">
+                    <h3>Live Classes</h3>
+                    <p>Engage in real-time interactive sessions led by expert instructors. These sessions provide the opportunity 
+                        for direct interaction, Q&A sessions, and dynamic discussions, enhancing your understanding and retention
+                        of course material.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <h3>Interactive Learning</h3>
+                    <p>Break down language barriers with courses delivered in your preferred regional language. Our dedicated 
+                        support ensures that language is not a barrier to your learning, allowing you to fully comprehend and 
+                        engage with the content.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <h3>Weekend Classes</h3>
+                    <p>Designed for those with busy weekday schedules, our weekend classes offer the flexibility to participate
+                        in live sessions and access course materials during weekends. This option allows you to balance your
+                        professional and personal commitments while still progressing towards your learning goals.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <h3>Live Classes</h3>
+                    <p>Engage in real-time interactive sessions led by expert instructors. These sessions provide the opportunity 
+                        for direct interaction, Q&A sessions, and dynamic discussions, enhancing your understanding and retention
+                        of course material.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <h3>Interactive Learning</h3>
+                    <p>Break down language barriers with courses delivered in your preferred regional language. Our dedicated 
+                        support ensures that language is not a barrier to your learning, allowing you to fully comprehend and 
+                        engage with the content.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <h3>Weekend Classes</h3>
+                    <p>Designed for those with busy weekday schedules, our weekend classes offer the flexibility to participate
+                        in live sessions and access course materials during weekends. This option allows you to balance your
+                        professional and personal commitments while still progressing towards your learning goals.</p>
                 </div>
             </div>
-            </div>
+        </div>
+    </section>
 
-            <div class="feature">
-                <h3>Flexible Learning</h3>
-                <p>Study at your own pace, with lifetime access to courses.</p>
-            </div>
-            <div class="feature">
-                <h3>Certifications</h3>
-                <p>Receive a certificate upon completing a course to showcase your skills.</p>
-            </div>
+    <section class="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <p>Receive a certificate upon completing a course to showcase your skills.</p>
         </div>
     </section>
 

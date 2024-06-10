@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - ViSN Academy</title>
+    <title>ViSN Academy Contact</title>
     <link rel="stylesheet" href="stylesheet/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <h1>ViSN Academy</h1>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <h1>ViSN Labs Academy</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                  <!--  <li class="nav-item"><a class="nav-link" href="#">Contact</a></li> -->
-                    <li class="nav-item"><a class="nav-link btn-login" href="#">Login</a></li>
-                    <li class="nav-item"><a class="nav-link btn-signup" href="#">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
     <section class="contact-us">
@@ -41,22 +43,24 @@
                 </div>
                 <div class="col-md-6 contact-form">
                     <h2>I'm Interested</h2>
-                    <form id="contactForm">
+                    <hr>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                        <input type="hidden" name="access_key" value="a4d5825e-2108-47e6-adb1-ee216cdd1a59">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="What Kind of courses are you looking for"></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="What kind of courses are you looking for"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -77,12 +81,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            document.getElementById('thankYouMessage').style.display = 'block';
-            document.getElementById('contactForm').reset();
-        });
-    </script>
 </body>
 </html>

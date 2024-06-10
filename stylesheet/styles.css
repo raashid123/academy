@@ -3,19 +3,23 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: linear-gradient(to right, #030405, #3c4d52);
 }
 
 .container {
     width: 100%;
     margin: 0 auto;
     max-width: 1140px;
+    text-align: center; /* Center-align text in container by default */
 }
 
 header {
-    background: linear-gradient(to right, #39516b, #56CCF2);
+    background: linear-gradient(to right, #030405, #3c4d52);
     color: #fff;
     padding: 15px 0;
     animation: slideInFromTop 1s ease-out;
+    text-align: center; /* Center-align text in header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
@@ -23,48 +27,120 @@ header .logo h1 {
     font-size: 1.8rem;
 }
 
-.nav {
-    list-style: none;
+.navbar {
     padding: 0;
-    margin: 0;
-    display: flex;
 }
 
-.nav .nav-item {
+.navbar-nav .nav-item {
     margin: 0 10px;
 }
 
-.nav .nav-link {
+.navbar-nav .nav-link {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
 }
 
-.nav .nav-link:hover {
+.navbar-nav .nav-link:hover {
     color: #f0ad4e;
 }
 
-.nav .nav-link.btn-login,
-.nav .nav-link.btn-signup {
-    background-color: #56CCF2;
-    padding: 5px 15px;
-    border-radius: 3px;
-    color: #fff;
-    transition: background-color 0.3s ease;
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-brand, .navbar-toggler {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    .navbar-brand {
+        order: 1;
+    }
+    .navbar-toggler {
+        order: 2;
+        margin-left: auto;
+        background-color: whitesmoke;
+    }
+    .navbar-collapse {
+        order: 3;
+        width: 100%;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
-.nav .nav-link.btn-signup {
-    background-color: #56CCF2;
+
+.why-choose {
+    padding: 50px 0;
+    background: linear-gradient(to right, #030405, #3c4d52);
+    text-align: center;
 }
 
-.nav .nav-link.btn-login:hover,
-.nav .nav-link.btn-signup:hover {
-    background-color: #d9534f;
+.why-choose h2 {
+    font-size: 2.5rem;
+    color: #b290ff;
+    margin-bottom: 30px;
+}
+
+.features-main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-main {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    margin: 10px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.feature-main:hover {
+    transform: translateY(-10px);
+}
+
+.feature-main .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #b290ff;
+}
+
+.feature-main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b290ff;
+}
+
+.feature-main p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: #FF5722 ;
+    margin-bottom: 30px;
 }
 
 .hero {
-    background: linear-gradient(to right, #ede7e5, #211e19);
+    background: linear-gradient(to right, #030405, #3c4d52);
     color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-about {
+    background-color: white;
+    color:#030405;
     padding: 100px 0;
     text-align: center;
     animation: fadeIn 2s ease-in;
@@ -96,21 +172,26 @@ header .logo h1 {
 
 .features {
     padding: 50px 0;
-    text-align: center;
-    animation: fadeIn 2s ease-in;
+    text-align: center; /* Center-align text in features section */
 }
 
 .features .feature {
     margin: 20px 0;
-    background-color: #f5f5f5;
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 5px;
     transition: transform 0.3s ease;
-    animation: popIn 1s ease-out;
+    text-align: center; /* Center-align text in each feature */
 }
 
 .features .feature:hover {
     transform: translateY(-10px);
+}
+
+.features .feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF5722;
 }
 
 .features .feature h3 {
@@ -121,12 +202,92 @@ header .logo h1 {
 
 .features .feature p {
     font-size: 1rem;
-    color: #666;
+    color: #ffffff;
 }
+
+.features p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.journey {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.journey h2 {
+    font-size: 2.5rem;
+    color: #b290ff;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 23.5%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: #b290ff;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 60px;
+}
+
+.timeline-item .number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #b290ff;
+    color: #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+
+.timeline-item .content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    text-align: ;
+}
+
+.timeline-item .content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b290ff;
+}
+
+.timeline-item .content p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
 
 .contact-us {
     padding: 50px 0;
-    background-color: #f5f5f5;
+    background: linear-gradient(to right, #030405, #3c4d52);
+    animation: fadeIn 2s ease-in;
+    text-align: center; /* Center-align text in contact-us section */
 }
 
 .contact-info {
@@ -135,6 +296,7 @@ header .logo h1 {
     padding: 30px;
     border-radius: 5px;
     margin-bottom: 30px;
+    text-align: center; /* Center-align text in contact-info section */
 }
 
 .contact-info h2 {
@@ -162,11 +324,13 @@ header .logo h1 {
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left-align text in contact-form for form fields */
 }
 
 .contact-form h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    text-align: center; /* Center-align form heading */
 }
 
 .contact-form .form-group {
@@ -208,7 +372,7 @@ header .logo h1 {
 
 .instructors .card {
     margin-bottom: 20px;
-    animation: popIn 1s ease-out;
+    text-align: center;
 }
 
 .instructors .card img {
@@ -230,45 +394,243 @@ header .logo h1 {
     margin-bottom: 15px;
 }
 
-footer {
-    background: linear-gradient(to right, #4A90E2, #56CCF2);
+.instructors .card .card-link {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.instructors .card .card-link:hover {
+    color: #56CCF2;
+}
+
+.certifications {
+    background: linear-gradient(to right, #030405, #3c4d52);
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.certifications h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #b290ff;
+}
+
+.certifications p {
+    font-size: 1rem;
+    color: white;
+}
+
+/*Courses page css*/
+/* Custom Styles for About Us Section */
+.about-section h1 {
+    font-size: 2.5rem;
+    color: #FF5722;
+  }
+  
+  .about {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 100%;
+  }
+  
+  .about-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #FF5722;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .about-title {
+      font-size: 1.1rem;
+    }
+  
+    .about-text {
+      font-size: 0.95rem;
+    }
+  }
+
+.curriculum-highlights{
+    padding: 50px 0;
+    text-align: center;
+}
+
+.curriculum-highlights h2{
+    font-size: 2.5rem;
+    color: #b290ff;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.highlight,
+.outcome {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px); /* Responsive flex basis */
+    box-sizing: border-box;
+    text-align: left; /* Ensure text is aligned to the left within content boxes */
+}
+
+.outcome .number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FF5722;
+    color: #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.highlight h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b290ff;
+}
+
+.highlight p,
+.outcome p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.learning-outcomes {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.learning-outcomes h2 {
+    font-size: 2.5rem;
+    color: #FF5722;
+    margin-bottom: 30px;
+}
+
+.outcome h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF5722;
+}
+
+
+/* SVG specific styles */
+.hero-svg {
+    width: 100%; /* Ensure the SVG takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline-block space */
+}
+
+/* Define custom background colors for service boxes */
+.bg-blue {
+    background-color: #1e1e1e;
+    color: #fff; /* Text color */
+}
+
+.bg-blue h5  {
+    color: #b290ff; /* Text color */
+
+}
+
+.bg-blue p  {
+    color: #ffffff; /* Text color */
+
+}
+
+
+.footer {
+    background: linear-gradient(to right, #030405, #3c4d52);
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-footer p {
+.footer p {
     margin: 0;
+    color: white;
 }
 
-/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 @keyframes slideInFromTop {
-    0% {
+    from {
         transform: translateY(-100%);
         opacity: 0;
     }
-    100% {
+    to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
     }
-    100% {
-        opacity: 1;
+    .hero {
+        display: none;
+    }
+    .hero-mobile {
+        display: block;
+        padding: 100px 0;
+        text-align: center;
+        background: linear-gradient(to right, #030405, #3c4d52);
+        color: #fff;
+    }
+    .hero-mobile h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .hero-mobile p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .hero-mobile .btn-hero {
+        background-color: #4CAF50;
+        padding: 10px 20px;
+        border-radius: 3px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    .hero-mobile .btn-hero:hover {
+        background-color: #388E3C;
+    }
+    .hero-mobiles {
+        display: block;
+        padding: 100px 0;
+        text-align: center;
+        background-color: white;
+        color: #fff;
     }
 }
-
-@keyframes popIn {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .highlight,
+    .outcome {
+        flex: 1 1 100%;
     }
 }
