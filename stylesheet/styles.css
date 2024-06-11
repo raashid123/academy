@@ -13,6 +13,12 @@ body {
     text-align: center; /* Center-align text in container by default */
 }
 
+.container .servi h2{
+    font-size: 2.5rem;
+    color: #FF5722;
+    margin-bottom: 30px;
+}
+
 header {
     background: linear-gradient(to right, #030405, #3c4d52);
     color: #fff;
@@ -206,6 +212,45 @@ header .logo h1 {
 }
 
 .features p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.courses {
+    padding: 50px 0;
+    text-align: center; /* Center-align text in features section */
+}
+
+.courses .course {
+    margin: 20px 0;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    text-align: center; /* Center-align text in each feature */
+}
+.courses .course:hover {
+    transform: translateY(-10px);
+}
+
+.courses  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #b290ff;
+}
+
+.courses .course h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b290ff;
+}
+
+.courses .course p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.courses p {
     font-size: 1rem;
     color: #fff;
 }
@@ -543,27 +588,22 @@ header .logo h1 {
 
 
 /* SVG specific styles */
-.hero-svg {
-    width: 100%; /* Ensure the SVG takes up the full width of its container */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the section takes up the full viewport height */
+    width: 100vw; /* Ensure the section takes up the full viewport width */
+     /* Optional: background color for the section */
+  }
+  
+  .hero-svg {
+    width: auto; /* Ensure the SVG takes up the full width of its container */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline-block space */
-}
-
-/* Define custom background colors for service boxes */
-.bg-blue {
-    background-color: #1e1e1e;
-    color: #fff; /* Text color */
-}
-
-.bg-blue h5  {
-    color: #b290ff; /* Text color */
-
-}
-
-.bg-blue p  {
-    color: #ffffff; /* Text color */
-
-}
+    max-width: 100%;
+    max-height: 100%;
+  }
 
 .terms-section {
     padding: 40px 0;
@@ -590,18 +630,145 @@ header .logo h1 {
     margin-bottom: 10px;
   }
 
-
-.footer {
-    background: linear-gradient(to right, #030405, #3c4d52);
-    color: #fff;
-    padding-top: 40px;
-    padding-bottom: 20px;
+  .skills-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .footer-logo {
-    font-size: 24px;
-    font-weight: bold;
+  .skills-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
   }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .skill-item p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+
+  .tools-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tools-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tools-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.tool-item img {
+    max-width: 100px;
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+.tool-item p {
+    margin: 0;
+    font-size: 1em;
+}.tools-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tools-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tools-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.tool-item img {
+    max-width: 100px;
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+.tool-item p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Footer Section */
+.footer {
+    background:linear-gradient(to right, #030405, #3c4d52);;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
   
   .social-icons a {
     color: #fff;
