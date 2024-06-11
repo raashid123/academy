@@ -362,6 +362,7 @@ header .logo h1 {
     padding: 50px 0;
     background: #f5f5f5;
     text-align: center;
+    justify-content: center;
     animation: fadeIn 2s ease-in;
 }
 
@@ -371,6 +372,7 @@ header .logo h1 {
 }
 
 .instructors .card {
+    justify-content: center;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -382,6 +384,7 @@ header .logo h1 {
     object-fit: cover;
     margin: 0 auto 15px;
     display: block;
+    justify-content: center;
 }
 
 .instructors .card-title {
@@ -402,6 +405,14 @@ header .logo h1 {
 .instructors .card .card-link:hover {
     color: #56CCF2;
 }
+
+
+.rows {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 
 .certifications {
     background: linear-gradient(to right, #030405, #3c4d52);
@@ -554,18 +565,126 @@ header .logo h1 {
 
 }
 
+.terms-section {
+    padding: 40px 0;
+  }
+  
+  .terms-section h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .terms-section p, .terms-section ul {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .terms-section ul {
+    padding-left: 20px;
+  }
+  
+  .terms-section ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+  }
+
 
 .footer {
     background: linear-gradient(to right, #030405, #3c4d52);
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .footer ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+  
+  .footer-bottom a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom p {
+    margin-bottom: 0;
+  }
+  
+  .footer-bottom span {
+    margin: 0 10px;
+    color: #888;
+  }
 
-.footer p {
-    margin: 0;
-    color: white;
-}
+  .privacy-section {
+    padding: 40px 0;
+  }
+  
+  .privacy-section h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .privacy-section p, .privacy-section ul {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .privacy-section ul {
+    padding-left: 20px;
+  }
+  
+  .privacy-section ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+  }
+  
 
 @keyframes fadeIn {
     from { opacity: 0; }
